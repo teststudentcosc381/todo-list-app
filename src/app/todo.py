@@ -71,18 +71,20 @@ def delete_task(tasks):
         print("⚠️ Please enter a valid number.")
 
 
+def menu():
+    print("\n==== To-Do List Menu ====")
+    print("1. View tasks")
+    print("2. Add a task")
+    print("3. Mark task as complete")
+    print("4. Delete a task")
+    print("5. Exit")
+
 def main():
     """Main program loop."""
     tasks = load_tasks()
 
     while True:
-        print("\n==== To-Do List Menu ====")
-        print("1. View tasks")
-        print("2. Add a task")
-        print("3. Mark task as complete")
-        print("4. Delete a task")
-        print("5. Exit")
-
+        menu()
         choice = input("Select an option (1-5): ").strip()
 
         if choice == "1":
